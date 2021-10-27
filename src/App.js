@@ -1,32 +1,14 @@
 import React from "react";
-import Store from "./components/Store";
+import UseStateArray from "./useState/UseStateArray";
 
-const person = [
-  {
-    id: 1,
-    name: "Jame",
-    age: 24,
-  },
-  {
-    id: 2,
-    name: "Ice",
-    age: 15,
-  },
-];
+const numbers = [2, -100, 29, -47];
 
+const flitered = numbers.filter((num) => num < 0);
+console.log(flitered);
 function App() {
-  const clickHandler = (event) => {
-    alert("trigger");
-  };
   return (
-    <div>
-      {person.map((name) => {
-        return (
-          <Store key={name.id} {...name}>
-            <button onClick={clickHandler}>Click</button>
-          </Store>
-        );
-      })}
+    <div className="container">
+      <UseStateArray />
     </div>
   );
 }
