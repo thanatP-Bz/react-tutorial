@@ -14,19 +14,36 @@ const Counter = () => {
   const clear = () => {
     setCounter(0);
   };
+
+  const complexHandler = () => {
+    setTimeout(() => {
+      setCounter((prevCount) => {
+        return prevCount + 1;
+      });
+    }, 2000);
+  };
   return (
     <React.Fragment>
-      <h1 className="container">{counter}</h1>
+      <main>
+        <h1 className="container">{counter}</h1>
 
-      <button onClick={increment} className="btn">
-        Increment
-      </button>
-      <button onClick={clear} className="btn">
-        Clear
-      </button>
-      <button onClick={decrement} className="btn">
-        Decrement
-      </button>
+        <button onClick={increment} className="btn">
+          Increment
+        </button>
+        <button onClick={clear} className="btn">
+          Clear
+        </button>
+        <button onClick={decrement} className="btn">
+          Decrement
+        </button>
+      </main>
+
+      <div className="container">
+        <h2 className="container">complex counter</h2>
+        <button className="btn" onClick={complexHandler}>
+          click
+        </button>
+      </div>
     </React.Fragment>
   );
 };

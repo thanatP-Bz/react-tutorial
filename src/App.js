@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./useState/Counter";
+import UseEffectBasics from "./useEffect/UseEffectBasics";
 
 function App() {
   return (
     <div className="container">
-      <Counter />
+      <UseEffectBasics />
     </div>
   );
 }
