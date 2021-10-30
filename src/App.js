@@ -1,10 +1,10 @@
 import React from "react";
-import UseEffectBasics from "./useEffect/UseEffectBasics";
+import UseEffectCleanUp from "./useEffect/UseEffectCleanUp";
 
 function App() {
   return (
     <div className="container">
-      <UseEffectBasics />
+      <UseEffectCleanUp />
     </div>
   );
 }
