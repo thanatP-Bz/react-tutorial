@@ -1,10 +1,10 @@
 import React from "react";
-import UseEffectFetch from "./useEffect/UseEffectFetch";
+import Pokemon from "./useEffect/Pokemon";
 
 function App() {
   return (
     <div className="container">
-      <UseEffectFetch />
+      <Pokemon />
     </div>
   );
 }
