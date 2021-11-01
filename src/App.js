@@ -1,10 +1,10 @@
 import React from "react";
-import Pokemon from "./useEffect/Pokemon";
+import MultipleReturns from "./renderConditioning/MultipleReturns";
 
 function App() {
   return (
     <div className="container">
-      <Pokemon />
+      <MultipleReturns />
     </div>
   );
 }
