@@ -1,12 +1,7 @@
 import React from "react";
-import MultipleReturns from "./renderConditioning/MultipleReturns";
 
 function App() {
-  return (
-    <div className="container">
-      <MultipleReturns />
-    </div>
-  );
+  return <div className="container"></div>;
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
 const url = "https://api.github.com/users/QuincyLarson";
 
 const MultipleReturns = () => {
@@ -9,7 +9,15 @@ const MultipleReturns = () => {
 
   useEffect(() => {
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status >= 200 && res.status <= 299) {
+          return res.json();
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+          throw new Error(res.statusText);
+        }
+      })
       .then((user) => {
         const { login } = user;
         setUser(login);
