@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const ShortCircuit = () => {
-  const [text, setText] = useState("");
-  const [isError, setError] = useState(false);
+  /*   const [text, setText] = useState(""); */
+  const [isError, setError] = useState("");
   /*  const firstValue = text || "hello world";
   const secondValue = text && "hello world"; */
   const clickHandler = () => {

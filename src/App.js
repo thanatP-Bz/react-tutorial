@@ -1,10 +1,10 @@
 import React from "react";
-import ShortCircuit from "./short-circuit-evaluation/ShortCircuit";
+import ShowHide from "./showHide/ShowHide";
 
 function App() {
   return (
     <div className="container">
-      <ShortCircuit />
+      <ShowHide />
     </div>
   );
 }
