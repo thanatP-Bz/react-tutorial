@@ -1,10 +1,17 @@
-import React from "react";
-import ShowHide from "./showHide/ShowHide";
+import React, { useState } from "react";
 
 function App() {
+  const [text, setText] = useState(false);
+  const handler = () => {
+    setText(!text);
+  };
   return (
     <div className="container">
-      <ShowHide />
+      <h1>{text}</h1>
+      {text && "hello"}
+      <button className="btn" onClick={handler}>
+        click
+      </button>
     </div>
   );
 }
