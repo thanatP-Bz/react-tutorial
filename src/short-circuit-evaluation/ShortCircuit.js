@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ShortCircuit = () => {
   const [text, setText] = useState("");
-  const [isError, setError] = useState(true);
+  const [isError, setError] = useState(false);
   /*  const firstValue = text || "hello world";
   const secondValue = text && "hello world"; */
   const clickHandler = () => {
@@ -17,6 +17,7 @@ const ShortCircuit = () => {
       <button className="btn" onClick={clickHandler}>
         Click
       </button>
+      {isError || "hello world"}
       {isError && <h1>Error...</h1>}
       {isError ? "true" : "false"}
     </>
