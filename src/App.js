@@ -1,10 +1,10 @@
 import React from "react";
-import MultipleInput from "./form/MultipleInput";
+import UseRefBasics from "./useRef/UseRefBasics";
 
 function App() {
   return (
     <div className="container">
-      <MultipleInput />
+      <UseRefBasics />
     </div>
   );
 }
