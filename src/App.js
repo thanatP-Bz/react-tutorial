@@ -1,10 +1,10 @@
 import React from "react";
-import UseRefBasics from "./useRef/UseRefBasics";
+import Modal from "./useReducer/Modal";
 
 function App() {
   return (
     <div className="container">
-      <UseRefBasics />
+      <Modal />
     </div>
   );
 }
