@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./useReducer/Modal";
+import Modal from "./useReducer";
 
 function App() {
   return (
