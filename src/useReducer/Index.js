@@ -3,12 +3,23 @@ import Modal from "./Modal";
 import Data from "../Data";
 // reducer function
 
-const reducer = (state, action) => {};
+const reducer = (state, action) => {
+  if (action.type === "ADD_ITEM") {
+    const newPeople = [...state.people, action.payload];
+    return {
+      ...state,
+      people: newPeople,
+      isModalOpen: true,
+      modalContent: "item",
+    };
+  }
+  throw new Error("The item does not match");
+};
 
 const defaultState = {
-  people: Data,
-  isModalOpen: true,
-  modalContent: "Hello world",
+  people: [],
+  isModalOpen: false,
+  modalContent: "",
 };
 
 const Index = () => {
@@ -18,7 +29,10 @@ const Index = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     if (name) {
+      const newItem = { id: Math.random().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newItem });
     } else {
+      dispatch({ type: "RANDOM" });
     }
   };
   return (
