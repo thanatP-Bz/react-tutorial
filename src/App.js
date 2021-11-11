@@ -1,11 +1,10 @@
 import React from "react";
-import Modal from "./useReducer";
-import Count from "./useReducer/countUseReducer/Count";
+import PropDrilling from "./propDrilling/PropDrilling";
 
 function App() {
   return (
     <div className="container">
-      <Count />
+      <PropDrilling />
     </div>
   );
 }
