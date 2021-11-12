@@ -1,11 +1,10 @@
 import React from "react";
-import PropDrilling from "./propDrilling/PropDrilling";
-import Count from "./useReducer/countUseReducer/Count";
+import Index from "./ReactRouter";
 
 function App() {
   return (
     <div className="container">
-      <Count />
+      <Index />
     </div>
   );
 }
